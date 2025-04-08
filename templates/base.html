@@ -19,7 +19,7 @@
     <title> {% block title %}{% endblock title %} Anu Ice cream</title>
   </head>
   <body>
-   
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -68,6 +68,18 @@
           </div>
         </div>
 </nav> 
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+  </span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+{% endif %}
+
 {% block body %}{% endblock body %}
   </body>
 </html>
