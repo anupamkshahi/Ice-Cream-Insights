@@ -1,196 +1,148 @@
 {% extends "base.html" %}
 
 {% block title %}Home{% endblock title %}
+
 {% block body %}
-<div class="container my-4 px-0">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="static/img/1.avif" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Welcome to the best Ice Cream of Muzaffarpur</h5>
-              <p>Best Ice Cream I have eaten till now</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://picsum.photos/150?Ice" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>We serve love with our Ice Creams</h5>
-              <p>We don’t just scoop ice cream,we serve love in every bite</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://picsum.photos/100?cold" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Inaugrated by Sushant Singh Rajput</h5>
-              <p>SThis shop is inaugrated by Sushant Singh Rajput.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-</div>
+<style>
+    body {
+        background-color: #fff0f5; /* soft pink background */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .carousel-inner img {
+        height: 450px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    .card img {
+        height: 250px;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .card {
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    html {
+        scroll-behavior: smooth;
+      }
+      
+</style>
 
-<div class="container my-3">
-    <h1 class='my-4 text-center'>Select from a range of ice cream</h1>
+<div class="container my-5">
+    <h2 class="text-center text-primary mb-3" style="font-weight: bold;">🍨Welcome to Ice Cream Insights🍦</h2>
+    <p class="text-center text-muted mb-5" style="font-size: 1.2rem;">
+        Discover the coolest scoops, flavors from around the world, and real user reviews — all in one delightful place!
+    </p>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <!-- Your cards go here -->
+    <a href="#indian-section" style="text-decoration: none; color: inherit;">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img src="static/img/kulfi.jpg" class="card-img-top" alt="Ice Cream {{ i }}">
+                <div class="card-body">
+                    <h5 class="card-title text-center">India</h5>
+                    <p class="card-text">From the streets of Mumbai to the hills of Shimla "kulfi is India’s creamy tradition in every bite"</p>
+                </div>
+            </div>
+        </div>
+    </a>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://picsum.photos/100?boy" class="d-block w-100" alt="...">
-          
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+    <a href="#American-section" style="text-decoration: none; color: inherit;">
+        <div class="col">
+          <div class="card shadow-sm">
+              <img src="static/img/pasted-image-0-1.png" class="card-img-top" alt="Ice Cream {{ i }}">
+              <div class="card-body">
+                  <h5 class="card-title text-center">America</h5>
+                  <p class="card-text">Sundaes, sprinkles, and sweet dreams "America’s scoop of happiness in every cone"</p>
               </div>
-              <small class="text-muted">9 mins</small>
-            </div>
           </div>
-        </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-         <img src="https://picsum.photos/100?Uncle" class="d-block w-100" alt="...">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://picsum.photos/100?girl" class="d-block w-100" alt="...">
+    </a>
 
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
+    <a href="#Dubai-section" style="text-decoration: none; color: inherit;">
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/img/the-Best-Ice-Cream-in-Dubai.jpg" class="card-img-top" alt="Ice Cream {{ i }}">
+            <div class="card-body">
+                <h5 class="card-title text-center">Dubai</h5>
+                <p class="card-text">Cool indulgence meets desert luxury "Dubai's ice cream is gold-laced and unforgettable"</p>
             </div>
-          </div>
         </div>
       </div>
+    </a>
 
+    <a href="#Italian-section" style="text-decoration: none; color: inherit;">
       <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://picsum.photos/100?aunty" class="d-block w-100" alt="...">
+      <div class="card shadow-sm">
+          <img src="static/img/istockphoto-621597398-612x612.jpg" class="card-img-top" alt="Ice Cream {{ i }}">
           <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
+              <h5 class="card-title text-center">Italy</h5>
+              <p class="card-text">Gelato isn’t just dessert in Italy "it’s a way of life, rich in flavor and passion"</p>
           </div>
-        </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://picsum.photos/100?man" class="d-block w-100" alt="...">
+      </div>
+    </a>
 
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
+    <a href="#Thai-section" style="text-decoration: none; color: inherit;"> 
+    <div class="col">
+    <div class="card shadow-sm">
+        <img src="static/img/intro-1731965614.jpg" class="card-img-top" alt="Ice Cream {{ i }}">
+        <div class="card-body">
+            <h5 class="card-title text-center">Thailand</h5>
+            <p class="card-text">Coconut chill and tropical thrills "Thailand serves ice cream with an exotic twist"</p>
         </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://picsum.photos/100?women" class="d-block w-100" alt="...">
-
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://picsum.photos/100?oldMan" class="d-block w-100" alt="...">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://picsum.photos/100?oldWomen" class="d-block w-100" alt="...">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-            <img src="https://picsum.photos/100?hero" class="d-block w-100" alt="...">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
- 
-{% endblock body %}
+    </div>
+   </a>
 
-   
+   <a href="#European-section" style="text-decoration: none; color: inherit;">
+<div class="col">
+    <div class="card shadow-sm">
+        <img src="static/img/5329af92-377d-472d-8d9f-d92c56721efd-953x1024.jpg" class="card-img-top" alt="Ice Cream {{ i }}">
+        <div class="card-body">
+            <h5 class="card-title text-center">Europe</h5>
+            <p class="card-text">From Paris to Prague, every European city tells a frosty tale through its artisanal scoops"</p>
+        </div>
+    </div>        
+        
+</div>
+</a>
+</div>
+<div id="indian-section" class="container my-5">
+    <h2 class="text-center mb-4">Indian Ice Creams</h2>
+    <p class="text-center">🧡Are you kulfi? Because you’ve got that desi charm that never melts away🧡 </p>
+    <p class="text-center">Indian ice cream isn't just dessert—it's tradition you can taste.</p>
+  </div>
+  
+  <div id="American-section" class="container my-5">
+    <h2 class="text-center mb-4">American Ice Creams</h2>
+    <p class="text-center">❤️Are you rocky road? Because I’d still choose you even if life gets a little bumpy❤️</p>
+    <p class="text-center">American ice cream is bold, fun, and full of flavor—just like the people who eat it.</p>
+  </div>
+  
+  <div id="Dubai-section" class="container my-5">
+    <h2 class="text-center mb-4">Dubai Ice Creams</h2>
+    <p class="text-center">💛Are you made with 24K gold like that Dubai dessert? Because you’re shining way too bright for my budget💛</p>
+    <p class="text-center">Whether it's gold-dusted cones or exotic dates, Dubai makes ice cream feel like royalty.</p>
+  </div>
+  
+  <div id="Italian-section" class="container my-5">
+    <h2 class="text-center mb-4">Italian Ice Creams</h2>
+    <p class="text-center">💙Are you stracciatella? Because you’ve got that perfect blend of mystery and sweetness💙</p>
+    <p class="text-center">Italian gelato: less air, more flavor—just like Italian love, deep and real.</p>
+  </div>
+  
+  <div id="Thai-section" class="container my-5">
+    <h2 class="text-center mb-4">Thai Ice Creams</h2>
+    <p class="text-center">💚You roll through my mind like Thai ice cream on a cold plate—smooth, sweet, and unforgettable💚</p>
+    <p class="text-center">Thai ice cream is a performance—crafted with flair, full of tropical flavor, and always worth the wait.</p>
+  </div>
+  
+  <div id="European-section" class="container my-5">
+    <h2 class="text-center mb-4">European Ice Creams</h2>
+    <p class="text-center">💜Are you from Vienna? Because that Viennetta-style elegance is radiating from you💜</p>
+    <p class="text-center">From creamy French glace to bold Spanish helado, European ice cream is a trip around the world in one cone.</p>
+  </div>
+  
+{% endblock body %}

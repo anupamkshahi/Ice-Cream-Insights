@@ -3,35 +3,85 @@
 {% block title %}Contact{% endblock title %}
 
 {% block body %}
-<div class="container-fluid mb-3 py-4">
-    <img src="static/img/3.jpg"style="object-fit:cover width: 2000px; height: 500px; object-fit:center;"class=" w-50 my-4" alt="...">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Apply Ice Cream Theme -->
+<style>
+    body {
+        background: linear-gradient(to right, #ffe4ec, #e0f7fa);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    h1.display-5 {
+        color: #ff69b4; /* Strawberry Pink */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .lead.text-secondary {
+        color: #7b68ee !important; /* Lavender */
+    }
+
+    .form-control {
+        background-color: #fff8fc;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+    .container.p-4 {
+        background-color: #fff0f5;
+    }
+</style>
+
+<!-- Section: Heading -->
+<div class="container text-center my-5">
+    <h1 class="display-5 fw-bold">
+        Where flavor meets feedback 🍦
+    </h1>
+    <p class="lead text-secondary">
+        Every review matters — Tell us what you think!
+    </p>
 </div>
-<div class="container">
-    <h1 class="text-center">Contact Us</h1>
 
-<form method="post" action="/contact">
-{% csrf_token %}
+<!-- Section: Contact Form -->
+<div class="container p-4 my-5 rounded shadow-lg">
+    <h2 class="text-center mb-4" style="color: #ff69b4;">Share Your Experience</h2>
 
-<div class="mb-3">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-  </div>
+    <form method="post" action="/contact">
+        {% csrf_token %}
 
-  <div class="mb-3">
-    <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-  </div>
+        <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Name</label>
+            <input type="text" class="form-control border-primary" id="name" name="name" placeholder="Enter your name" required>
+        </div>
 
-  <div class="mb-3">
-    <label for="Phone">phone number</label>
-    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone">
-  </div>
+        <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Email address</label>
+            <input type="email" class="form-control border-primary" id="email" name="email" placeholder="Enter your email" required>
+        </div>
 
-  <div class="mb-3">
-    <label for="desc">Tell me about what you want to contact me for....</label>
-    <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
-  </div>
-<button class="btn btn-primary" type="Submit">Submit</button>
-</form>
+        <div class="mb-3">
+            <label for="phone" class="form-label fw-semibold">Phone number</label>
+            <input type="tel" class="form-control border-primary" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="desc" class="form-label fw-semibold">Your opinion matters!</label>
+            <textarea class="form-control border-primary" id="desc" rows="4" name="desc" placeholder="Give your rating and share your thoughts about your favorite ice creams" required></textarea>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-lg btn-success px-5 fw-bold" type="submit">Submit</button>
+        </div>
+    </form>
 </div>
+
 {% endblock body %}
